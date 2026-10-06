@@ -9,5 +9,6 @@ class SaisieUtilisateur {
         System.out.println("Veuillez saisir le nom :");
         nom = saisie.nextLine();
         System.out.println("Vous vous appelez " + prenom + " " + nom);
+        saisie.close();
     }
 }

@@ -9,5 +9,6 @@ class Heure {
         heures = nb / 60;
         minutes = nb % 60;
         System.out.println(nb + " minutes est équivalent à " + heures + " heures et " + minutes + " minutes");
+        saisie.close();
     }
 }
