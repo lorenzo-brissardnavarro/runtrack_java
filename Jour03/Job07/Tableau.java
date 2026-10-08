@@ -1,6 +1,17 @@
 import java.util.Arrays;
 
 class Tableau {
+
+    public static int calculMatrice(int[][] matrice) {
+        int total = 0;
+        for (int i = 0; i < matrice.length; i++) {
+            for (int j = 0; j < matrice[i].length; j++) {
+                total += matrice[i][j];
+            }
+        }
+        return total;
+    }
+
     public static void main(String[] args) {
         int[][] matrice1 = {
             {1, 2, 3},
@@ -12,21 +23,11 @@ class Tableau {
             {40, 50, 60},
             {70, 80, 90}
         };
-        int total = 0;
+        
         System.out.println("Matrice 1 : " + Arrays.deepToString(matrice1));
         System.out.println("Matrice 1 : " + Arrays.deepToString(matrice2));
 
-        for (int i = 0; i < matrice1.length; i++) {
-            for (int j = 0; j < matrice1[i].length; j++) {
-                total += matrice1[i][j];
-            }
-        }
-
-        for (int i = 0; i < matrice2.length; i++) {
-            for (int j = 0; j < matrice2[i].length; j++) {
-                total += matrice2[i][j];
-            }
-        }
+        int total = Tableau.calculMatrice(matrice1) + Tableau.calculMatrice(matrice2);
         System.out.println("Le total des 2 matrices donne : " + total);
     }
 }
