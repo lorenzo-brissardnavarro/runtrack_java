@@ -1,20 +1,20 @@
 class CompteBancaire {
-    int solde;
+    private int solde;
 
-    CompteBancaire(int solde) {
+    public CompteBancaire(int solde) {
         this.solde = solde;
     }
 
-    void afficherSolde() {
+    public void afficherSolde() {
         System.out.println("Solde actuel : " + this.solde + " euros");
     }
 
-    void deposer(int montant) {
+    public void deposer(int montant) {
         this.solde += montant;
         System.out.println(montant + "euros déposés. Nouveau solde : " + this.solde + " euros");
     }
 
-    void retirer(int montant) {
+    public void retirer(int montant) {
         if (this.solde - montant < 0) {
             System.out.println("Tentative de retrait de " + montant + " euros... Solde insuffisant !");
         } else {

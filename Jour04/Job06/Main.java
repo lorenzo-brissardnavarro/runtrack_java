@@ -3,10 +3,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Etudiant {
-    String prenom;
-    ArrayList<Integer> notes;
+    private String prenom;
+    private ArrayList<Integer> notes;
 
-    Etudiant(String prenom, int[] tableau) {
+    public Etudiant(String prenom, int[] tableau) {
         this.prenom = prenom;
         this.notes = new ArrayList<>();
 
@@ -15,15 +15,15 @@ class Etudiant {
         }
     }
 
-    void getPrenom() {
+    public void getPrenom() {
         System.out.println("Prénom de l'étudiant : " + this.prenom);
     }
 
-    void getNotes() {
+    public void getNotes() {
         System.out.println("Notes : " + this.notes);
     }
 
-    double moyenne() {
+    public double moyenne() {
         int total = 0;
         for (int i = 0 ; i < this.notes.size() ; i++) {
             total += this.notes.get(i);
@@ -31,7 +31,7 @@ class Etudiant {
         return (double) total / this.notes.size();
     }
 
-    int maximum() {
+    public int maximum() {
         int max = this.notes.get(0);
         for (int i = 0 ; i < this.notes.size() ; i++) {
             if (this.notes.get(i) > max) {
@@ -41,7 +41,7 @@ class Etudiant {
         return max;
     }
 
-    int minimum() {
+    public int minimum() {
         int min = this.notes.get(0);
         for (int i = 0 ; i < this.notes.size() ; i++) {
             if (this.notes.get(i) < min) {
@@ -51,7 +51,7 @@ class Etudiant {
         return min;
     }
 
-    void ajoutNote(int valeur) {
+    public void ajoutNote(int valeur) {
         this.notes.add(valeur);
     }
     

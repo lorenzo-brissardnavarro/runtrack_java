@@ -1,26 +1,26 @@
 import java.util.Scanner; 
 
 class Calculatrice {
-    double nb1, nb2;
+    private double nb1, nb2;
 
-    Calculatrice(double nb1, double nb2) {
+    public Calculatrice(double nb1, double nb2) {
         this.nb1 = nb1;
         this.nb2 = nb2;
     }
 
-    double additionner() {
+    public double additionner() {
         return this.nb1 + this.nb2;
     }
 
-    double soustraire() {
+    public double soustraire() {
         return this.nb1 - this.nb2;
     }
 
-    double multiplier() {
+    public double multiplier() {
         return this.nb1 * this.nb2;
     }
 
-    double diviser() {
+    public double diviser() {
         return this.nb1 / this.nb2;
     }
     

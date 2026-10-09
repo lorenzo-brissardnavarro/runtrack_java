@@ -1,28 +1,28 @@
 import java.util.Random;
 
 class JeuDeDes {
-    int de1, de2;
+    private int de1, de2;
 
-    JeuDeDes() {
+    public JeuDeDes() {
         this.de1 = 0;
         this.de2 = 0;
     }
 
-    void lancerDes() {
+    public void lancerDes() {
         Random randomNumbers = new Random();
         this.de1 = randomNumbers.nextInt(6) + 1;
         this.de2 = randomNumbers.nextInt(6) + 1;
     }
 
-    int somme(){
+    public int somme(){
         return this.de1 + this.de2;
     }
 
-    int getDe1() {
+    public int getDe1() {
         return this.de1;
     }
 
-    int getDe2() {
+    public int getDe2() {
         return this.de2;
     }
     

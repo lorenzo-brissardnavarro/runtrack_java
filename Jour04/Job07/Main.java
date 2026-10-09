@@ -1,20 +1,20 @@
 class Forme {
 
-    double aire() {
+    public double aire() {
         return 0;
     }
 }
 
 class Cercle extends Forme {
 
-    double rayon;
+    private double rayon;
 
-    Cercle(double rayon) {
+    public Cercle(double rayon) {
         this.rayon = rayon;
     }
 
     @Override
-    double aire() {
+    public double aire() {
         double valeur = Math.PI * this.rayon * this.rayon;
         return Math.round(valeur * 100.0) / 100.0;
     }
@@ -22,14 +22,14 @@ class Cercle extends Forme {
 
 class Carre extends Forme {
 
-    double cote;
+    private double cote;
 
-    Carre(double cote) {
+    public Carre(double cote) {
         this.cote = cote;
     }
 
     @Override
-    double aire() {
+    public double aire() {
         return this.cote * this.cote;
     }
 }
